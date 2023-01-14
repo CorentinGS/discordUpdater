@@ -102,7 +102,7 @@ func buttonClicked(app *gtk.Application, fn func() error) {
 
 func canary() error {
 	// Run the canary script and display the output in a new window
-	cmd := exec.Command("bash", "-c", "./script/canary.sh")
+	cmd := exec.Command("bash", "-c", canaryScript)
 
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
@@ -129,7 +129,7 @@ func ptb() error {
 }
 
 func discord() error {
-	cmd := exec.Command("bash", "-c", "./script/discord.sh")
+	cmd := exec.Command("bash", "-c", discordScript)
 
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
